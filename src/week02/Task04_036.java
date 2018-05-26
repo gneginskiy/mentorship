@@ -10,7 +10,7 @@ import static java.lang.Math.*;
 
 public class Task04_036 {
 
-    public static void main(String[] args) {
+    public static void main(String... args) {
         int t = (int) (random() * 100);
         System.out.println("t = " + t + "; Traffic light is " + printcolor(t));
     }

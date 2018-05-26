@@ -13,7 +13,7 @@ import static java.lang.Math.abs;
 
 public class Task01_017 {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String... args) throws Exception {
         int x1 = 3, x2 = 4;
         double example1 = (sqrt(pow(x1, 2) + pow(x2, 2)));
         System.out.println("1) Square root of (x1^2+x2^2)=" + example1);

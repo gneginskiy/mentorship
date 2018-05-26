@@ -6,21 +6,16 @@ package week01;
  */
 
 import java.io.*;
+import java.util.Scanner;
 
 public class Task02_031 {
-    public static void main(String[] args) {
+    public static void main(String... args) {
         System.out.println("Input n - a three-digit number:");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int n = 0;
-        try {
-            n = Integer.parseInt(reader.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        int hundred = n / 100;
-        int ten = (n - hundred * 100) / 10;
-        int digit = n - hundred * 100 - ten * 10;
-        int x = hundred * 100 + digit * 10 + ten;
-        System.out.println("a-b-c to a-c-b operation:" + x);
+        int n = new Scanner(System.in).nextInt();
+        int firstDigit = n / 100;
+        int secondDigit = (n - firstDigit * 100) / 10;
+        int thirdDigit = n - firstDigit * 100 - secondDigit * 10;
+        int result = firstDigit * 100 + thirdDigit * 10 + secondDigit;
+        System.out.println("a-b-c to a-c-b operation:" + result);
     }
 }

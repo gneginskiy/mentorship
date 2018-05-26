@@ -4,19 +4,14 @@ package week01;
  */
 
 import util.PrintStreamAdapter;
+import util.TestHelper;
 
 import java.io.ByteArrayInputStream;
 
 public class Task01_003Test {
 
-    public static void main(String[] args) {
-        PrintStreamAdapter printStreamAdapter = new PrintStreamAdapter(System.out);
-        System.setOut(printStreamAdapter);
-        int randomDigit = (int) (Math.random() * 100);
-        String data = randomDigit + "\r\n";
-        System.setIn(new ByteArrayInputStream(data.getBytes()));
-        Task01_003.main(new String[]{});
-        String result = printStreamAdapter.getOutputString();
-        System.out.println(("You entered a number " + randomDigit).equals(result) ? "OK" : "FAIL");
+    public static void main(String... args) {
+        TestHelper.checkLastString(Task01_003::main, "123", "You entered a number 123");
     }
+
 }

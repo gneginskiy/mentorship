@@ -4,22 +4,12 @@ package week01;
  * The displayed number must be preceded by the message "You entered a number."
  */
 
-import java.io.*;
+import java.util.Scanner;
 
 public class Task01_003 {
 
-    public static void main(String[] args) {
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        int n = 0;
-        try {
-            n = Integer.parseInt(reader.readLine());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        printn2(n);
+    public static void main(String... args) {
+        System.out.println("You entered a number " + new Scanner(System.in).nextInt());
     }
 
-    public static void printn2(int n) {
-        System.out.println("You entered a number " + n);
-    }
 }

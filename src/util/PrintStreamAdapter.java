@@ -22,7 +22,7 @@ public class PrintStreamAdapter extends PrintStream {
 
     @Override
     public void println(int x) {
-        outputInt = x;
+        outputString = "" + x;
         super.println(x);
     }
 

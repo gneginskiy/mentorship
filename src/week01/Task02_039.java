@@ -8,18 +8,17 @@ package week01;
 import java.util.Scanner;
 
 public class Task02_039 {
-    public static void main(String[] args) {
+    public static void main(String... args) {
         Scanner scanner = new Scanner(System.in);
-        int h = scanner.nextInt();
-        int m = scanner.nextInt();
-        int s = scanner.nextInt();
-        double position = h * 3600 + m * 60 + s;
-        if (position > 43200) position = position - 43200;
+        int hours = scanner.nextInt();
+        int minutes = scanner.nextInt();
+        int seconds = scanner.nextInt();
+        double position = hours * 3600 + minutes * 60 + seconds;
+        if (position > 43200) {
+            position -= 43200;
+        }
         System.out.println("position=" + position);
         double degrees = position / 120;
-        //if (degrees > 180) {
-        //    degrees = 180 - (degrees - 180);
-        //}
         System.out.println("degrees=" + degrees);
     }
 }

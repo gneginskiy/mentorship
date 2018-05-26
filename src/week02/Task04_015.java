@@ -11,7 +11,7 @@ import java.util.Calendar;
 
 public class Task04_015 {
 
-    public static void main(String... args) {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter your month of birth: ");
         int month = scanner.nextInt();

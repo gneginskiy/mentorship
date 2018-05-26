@@ -11,7 +11,7 @@ package week02;
 
 public class Task03_029 {
 
-    public static void main(String... args) {
+    public static void main(String[] args) {
         int x = (int) (Math.random() * -100), y = (int) (Math.random() * 150), z = (int) (Math.random() * -100);
         //x and y is a number from 0 to 99
         System.out.println("x=" + x + " y=" + y + " z=" + z);
